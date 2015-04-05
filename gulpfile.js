@@ -11,7 +11,8 @@ var options = {
 
 var filesToMove = [
 				'./**/*.*',
-				'!./node_modules/**/'
+				'!./node_modules/**/',
+				'!./gulpfile.js'
         //'./icons/**/*.*',
         //'./src/page_action/**/*.*',
         //'./manifest.json'
