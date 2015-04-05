@@ -1,0 +1,11 @@
+
+.user--link { color: #fff; text-decoration: none; }
+
+.iframe-container > iframe { height:1592px!important }
+.iframe-container--all > iframe { height:1592px!important }
+
+@media (max-width:400px)	{ 
+	.iframe-container > iframe { height:4776px!important } 
+	.iframe-container--all > iframe { height:4776px!important } 
+
+}
