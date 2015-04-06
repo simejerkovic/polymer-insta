@@ -30,7 +30,7 @@ gulp.task('copyto:dist', function () {
 // Copy all files at the root level (app)
 gulp.task('copy', ['clean'], function () {
   return gulp.src([
-    './*',
+		'./**/*.*',
 		'!./node_modules/**/'
   ], {
     dot: true
