@@ -1,6 +1,6 @@
-var gulp        = require('gulp');
-var deploy      = require('gulp-gh-pages');
-
+var gulp = require('gulp');
+var deploy = require('gulp-gh-pages');
+var del = require('del');
 
 /*******************************************************************************
     COPY TO DIST
@@ -26,6 +26,19 @@ gulp.task('copyto:dist', function () {
     })
     .pipe(gulp.dest('./dist'));
 });
+
+// Copy all files at the root level (app)
+gulp.task('copy', ['clean'], function () {
+  return gulp.src([
+		'./**/*.*',
+		'!./node_modules/**/'
+  ], {
+    dot: true
+  }).pipe(gulp.dest('dist'));
+});
+
+// Clean output directory
+gulp.task('clean', del.bind(null, ['.tmp', './dist/**/', '!dist/.git'], {dot: true}));
 
 /**
  * Push build to gh-pages
