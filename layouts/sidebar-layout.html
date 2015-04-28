@@ -6,12 +6,12 @@
 <link rel="import" href="../bower_components/pushstate-anchor/src/pushstate-anchor.html">
 
 <polymer-element name="sidebar-layout" attributes="selected" noscript>
-  <template is="auto-binding">
+  <template>
     <link rel="stylesheet" href="sidebar-layout.css">
     <core-scaffold>
       <core-header-panel navigation flex mode="seamed">
         <core-toolbar>Polymer Insta</core-toolbar>
-        <core-item label="Ronnie Fieg" active?="{{selected == 'ronniefieg'}}">
+        <core-item selected="0" label="Ronnie Fieg" active?="{{selected == 'ronniefieg'}}">
           <a is="pushstate-anchor" href="/polymer-insta/"></a>
         </core-item>
         <core-item label="Victor Cruz" active?="{{selected == 'teamvic'}}">
