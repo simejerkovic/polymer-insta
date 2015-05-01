@@ -185,8 +185,8 @@
         <core-item label="alexpenfornis" active?="{{selected == 'alexpenfornis'}}">
           <a is="pushstate-anchor" href="/polymer-insta/alexpenfornis"></a>
         </core-item>
-        <core-item label="jose0ntiveros/" active?="{{selected == 'jose0ntiveros/'}}">
-          <a is="pushstate-anchor" href="/polymer-insta/jose0ntiveros/"></a>
+        <core-item label="jose0ntiveros" active?="{{selected == 'jose0ntiveros'}}">
+          <a is="pushstate-anchor" href="/polymer-insta/jose0ntiveros"></a>
         </core-item>
         <core-item label="mattthw" active?="{{selected == 'mattthw'}}">
           <a is="pushstate-anchor" href="/polymer-insta/mattthw"></a>
@@ -1002,3 +1002,8 @@
     </core-scaffold>
   </template>
 </polymer-element>
+<script>
+  var querySelector = document.querySelector.bind(document); // selectori
+  var querySelectorAll = document.querySelectorAll.bind(document); // selectori za each / ponavljajuce elemente
+  var coreItem = shadowRoot.querySelectorAll('core-item');
+</script>
