@@ -38,7 +38,10 @@ gulp.task('copy', ['clean'], function () {
 });
 
 // Clean output directory
-gulp.task('clean', del.bind(null, ['.tmp', './dist/**/', '!dist/.git'], {dot: true}));
+//gulp.task('clean', del.bind(null, ['.tmp', './dist/**/', '!dist/.git'], {dot: true}));
+gulp.task('clean', function(done) {
+  del(['dist'], done);
+});
 
 /**
  * Push build to gh-pages
